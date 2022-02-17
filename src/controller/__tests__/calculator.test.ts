@@ -35,5 +35,17 @@ describe("Calculator Controller", () => {
             expect(calulateTwo).toBe(7);
         }); 
     });
+
+    describe("custom delimiter", () => {
+      
+        it("Support a custom delimiter", async () => {
+            const calulateOne =  Add("//;\n1;3;4");
+            const calulateTwo =  Add("//$\n1$2$3");
+            const calulateThree =  Add("//@\n2@3@8");
+            expect(calulateOne).toBe(8);
+            expect(calulateTwo).toBe(6);
+            expect(calulateThree).toBe(13);
+        }); 
+    });
   
 });
