@@ -2,8 +2,7 @@
 
 ## Description
 * Testing controller Add function and logic  with Jest
-* Typing  custom properties on 
-* Typing methods on Mongoose models
+
 
 ## Install Dependencies
 * Open your terminal and run npm install 
