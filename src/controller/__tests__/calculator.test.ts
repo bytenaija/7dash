@@ -2,6 +2,17 @@ import { Add, replaceDelimiters } from "../calculator.controller";
   
 describe("Calculator Controller", () => {
    
+    describe("test delimiters", () => {
+      
+        it("should replace all the delimiters and return array of numbers", async () => {
+            const calulate =  replaceDelimiters("10,20,30");
+            const calulateTwo =  replaceDelimiters("1\n,2,3");
+            expect(calulate).toEqual([10,20,30]);
+            expect(calulateTwo).toEqual([1,2,3]);
+            
+        }); 
+    });
+
     describe("add number", () => {
       
         it("should replace all the delimiters and add all the numbers", async () => {
@@ -9,6 +20,7 @@ describe("Calculator Controller", () => {
             expect(calulate).toBe(8);
         }); 
     });
+
 
     describe("empty string", () => {
       
