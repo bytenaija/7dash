@@ -18,6 +18,5 @@ module.exports = {
         },
       },
     },
-    setupFilesAfterEnv: ["./test/setup.ts"],
     coveragePathIgnorePatterns: ["./tests/"],
   };
