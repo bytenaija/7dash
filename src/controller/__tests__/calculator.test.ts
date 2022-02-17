@@ -55,5 +55,17 @@ describe("Calculator Controller", () => {
             expect(calulate).toBe("Negatives not allowed");
         }); 
     });
+
+    describe("multiple delimiters", () => {
+      
+        it("Bonus points: Allow multiple delimiters of arbitrary length", async () => {
+            const calulateOne =  Add("2,1001");
+            const calulateTwo =  Add("//***\n1***2***3");
+            const calulateThree =  Add("//$,@\n1$2@3");
+            expect(calulateOne).toBe(2);
+            expect(calulateTwo).toBe(6);
+            expect(calulateThree).toBe(6);
+        }); 
+    });
   
 });
