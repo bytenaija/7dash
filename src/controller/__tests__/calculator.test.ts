@@ -47,5 +47,13 @@ describe("Calculator Controller", () => {
             expect(calulateThree).toBe(13);
         }); 
     });
+
+    describe("negatives number", () => {
+      
+        it("Calling add with a negative number should throw an exception", async () => {
+            const calulate =  Add("1,2,-5");
+            expect(calulate).toBe("Negatives not allowed");
+        }); 
+    });
   
 });
