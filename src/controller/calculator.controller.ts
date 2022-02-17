@@ -1,13 +1,29 @@
 export interface Operation {
-    x: number;
-    y: number;
-  }
+    input: string;
+}
 
+export const  replaceDelimiters = (param: any) => {
+    return param.match(/-?\d+/g).map(Number);
+}
 
-export const  performOperation = (input: Operation, x: number, y: number) => {
-  const handleAdd = (x: number, y: number) : number => x + y;
+export const  Add = (input: string) => {
 
-  return handleAdd(x,y);
+  let total: number = 0;
+
+  const resultChar = replaceDelimiters(input);
+  for (let i = 0; i < resultChar.length; i++) {
+	 
+    console.log(Number(resultChar[i]));
+    if(Number(resultChar[i]) < 0){
+        return "Negatives not allowed";	
+    }
+    if(Number(resultChar[i]) < 1000){			
+        total += Number(resultChar[i]);	 
+    }
+    
+ }
+
+    return total;
 
 };
 
