@@ -8,12 +8,15 @@ export const  replaceDelimiters = (param: any) => {
 
 export const  Add = (input: string) => {
 
+  if (input && !input.trim()) {
+        return 0;
+  }
+
   let total: number = 0;
 
   const resultChar = replaceDelimiters(input);
   for (let i = 0; i < resultChar.length; i++) {
 	 
-    console.log(Number(resultChar[i]));
     if(Number(resultChar[i]) < 0){
         return "Negatives not allowed";	
     }
