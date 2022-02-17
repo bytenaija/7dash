@@ -67,5 +67,13 @@ describe("Calculator Controller", () => {
             expect(calulateThree).toBe(6);
         }); 
     });
+
+    describe("isNot number", () => {
+      
+        it("Check if Sring Is not a Number, should return 0", async () => {
+            const calulate =  Add("FDGSDHSS");
+            expect(calulate).toBe(0);
+       }); 
+    });
   
 });

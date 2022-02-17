@@ -5,10 +5,12 @@ export interface Operation {
 export const  replaceDelimiters = (param: any) => {
     return param.match(/-?\d+/g).map(Number);
 }
-
+function isNumeric(val) {
+    return /^-?\d+$/.test(val);
+}
 export const  Add = (input: string) => {
 
-  if (input && !input.trim()) {
+  if (input && !input.trim() || !isNumeric(input)) {
         return 0;
   }
 
