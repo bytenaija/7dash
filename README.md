@@ -9,7 +9,7 @@
 
 ## Running tests with Jest
 * Open your Terminal
-* Run this command npm test -- -t "Iput the name of the method you want to test". E.g npm test -- -t "test delimiters"
+* Run this command npm test -- -t "Input the name of the method you want to test". E.g npm test -- -t "test delimiters"
 * See Test Screenshort in the project folder for more details
 
 

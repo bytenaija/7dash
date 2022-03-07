@@ -1,4 +1,4 @@
-import { Add, replaceDelimiters } from "../calculator.controller";
+import { Add, replaceDelimiters, replaceDelimitersDecimal } from "../calculator.controller";
   
 describe("Calculator Controller", () => {
    
@@ -7,8 +7,13 @@ describe("Calculator Controller", () => {
         it("should replace all the delimiters and return array of numbers", async () => {
             const calulate =  replaceDelimiters("10,20,30");
             const calulateTwo =  replaceDelimiters("1\n,2,3");
+
+            const calulateDecimal =  replaceDelimitersDecimal("1,2,3,3.4");
+
             expect(calulate).toEqual([10,20,30]);
             expect(calulateTwo).toEqual([1,2,3]);
+
+            expect(calulateDecimal).toEqual([1,2,3,3.4]);
             
         }); 
     });
